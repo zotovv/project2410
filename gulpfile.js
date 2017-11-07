@@ -17,7 +17,7 @@ var del = require("del");
 var sourcemaps = require("gulp-sourcemaps");
 
     gulp.task("style", function() {
-      gulp.src("sass/style.scss") 
+      gulp.src("src/sass/style.scss") 
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -30,7 +30,7 @@ var sourcemaps = require("gulp-sourcemaps");
             "last 2 Edge versions"
           ]}),
           mqpacker({
-            sort: true
+            sort: false
           })
         ]))
         .pipe(gulp.dest("build/css"))
@@ -45,8 +45,8 @@ var sourcemaps = require("gulp-sourcemaps");
         server: "build"
       });
 
-      gulp.watch("sass/**/*.scss", ["style"]);
-      gulp.watch("*.html")
+      gulp.watch("src/sass/**/*.scss", ["style"]);
+      gulp.watch("src/*.html")
         .on("change", server-reload);
     });
 

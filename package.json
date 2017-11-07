@@ -3,11 +3,8 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
-  },
+  
+   
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zotovv/project2410.git"
@@ -37,5 +34,10 @@
     "gulp.spritesmith": "^6.5.1",
     "imagemin-pngquant": "^5.0.1",
     "run-sequence": "^2.2.0"
+  },
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "gulp build",
+      "start": "npm run build && gulp serve"
   }
 }
